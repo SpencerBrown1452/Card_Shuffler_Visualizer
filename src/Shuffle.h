@@ -7,11 +7,14 @@
 
 #ifndef SHUFFLE_H
 #define SHUFFLE_H
+#include <vector>
+
+using namespace std;
 
 class Shuffle {
 public:
 	//This function will be used to shuffle a desk of cards of n size.
-	void shuffle(int cards[], int n);
+	vector <int> shuffle(vector<int> cards, int size);
 };
 
 #endif /* SHUFFLE_H */

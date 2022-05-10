@@ -7,17 +7,19 @@
 
 #include <bits/stdc++.h>
 #include "Shuffle.h"
+#include <vector>
 
 using namespace std;
 
-void Shuffle::shuffle(int cards[], int n) {
+vector <int> Shuffle::shuffle(vector<int> cards, int size) {
 
 	//Initialize random seed
 	srand(time(0));
 
 	//Randomly shuffle the deck using the random seed
-	for (int i = 0; i < n; i++) {
-		int r = i + (rand() % (n - i));
+	for (int i = 0; i < size - 1; i++) {
+		int r = i + rand() % (size - i);
 		swap(cards[i], cards[r]);
 	}
+	return cards;
 }
